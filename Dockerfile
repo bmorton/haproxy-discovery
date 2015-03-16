@@ -18,6 +18,7 @@ RUN mkdir -p /etc/confd/templates
 
 RUN touch /var/run/haproxy.pid
 
+ADD haproxy.conf /etc/rsyslog.d/
 ADD haproxy.toml /etc/confd/conf.d/haproxy.toml
 ADD haproxy.cfg.tmpl /etc/confd/templates/haproxy.cfg.tmpl
 ADD start.sh /start.sh
